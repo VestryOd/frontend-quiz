@@ -5,6 +5,8 @@ import Vuikit from "vuikit";
 import VuikitIcons from "@vuikit/icons";
 import hljs from 'highlight.js'
 
+import '@/assets/scss/app.scss';
+
 Vue.config.productionTip = false;
 
 Vue.use(Vuikit);
