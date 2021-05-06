@@ -1,15 +1,21 @@
 <template>
   <div id="app">
-    <h3>App</h3>
+    <div class="container">
+      <div class="wrapper">
+        <vHeader />
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+  import vHeader from "./components/Header";
 
 export default {
   name: 'App',
   components: {
-
+    vHeader,
   }
 }
 </script>

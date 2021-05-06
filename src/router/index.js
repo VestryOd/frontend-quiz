@@ -9,6 +9,16 @@ export default new Router({
     {
       path: '/',
       component: () => import('../views/Home.vue'),
+      props: false
+    },
+    {
+      path: '/js-theory',
+      component: () => import('../views/Theory.vue'),
+      props: true
+    },
+    {
+      path: '/js-practice',
+      component: () => import('../views/Practice.vue'),
       props: true
     }
   ]
