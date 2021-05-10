@@ -11,6 +11,26 @@ const routerConfig = [
   },
 ];
 
+const navLinkTypes = [
+  {
+    path: 'https://learn.javascript.ru/',
+    icon: 'jsr'
+  },
+  {
+    path: 'https://developer.mozilla.org/',
+    icon: 'mdn'
+  },
+  {
+    path: 'https://medium.com/',
+    icon: 'med'
+  },
+  {
+    path: 'https://habr.com/',
+    icon: 'hab'
+  },
+];
+
 export {
   routerConfig,
+  navLinkTypes,
 };

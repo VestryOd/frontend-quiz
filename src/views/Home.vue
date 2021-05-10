@@ -39,7 +39,7 @@
                   "id": "subnav-1-0",
                   "name": "jsr",
                   "src": "https://learn.javascript.ru/protocontentType-inheritance",
-                  "title": ""
+                  "title": "Prototype"
                 },
                 {
                   "id": "subnav-1-1",

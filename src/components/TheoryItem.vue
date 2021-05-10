@@ -14,6 +14,9 @@
         <div class="content-picture__wrapper" v-if="elem.contentType === 'img'">
           <Picture :content="elem.content" />
         </div>
+        <div class="content-nav__wrapper" v-if="elem.contentType === 'nav'">
+          <Nav :items="elem.content" />
+        </div>
       </div>
     </div>
   </section>
@@ -23,6 +26,7 @@
   import Code from "./Content/Code";
   import Description from "./Content/Description";
   import Picture from "./Content/Picture";
+  import Nav from "./Content/Nav";
 
   export default {
     name: "TheoryItem",
@@ -131,6 +135,7 @@
       Code,
       Description,
       Picture,
+      Nav,
     }
   }
 </script>
