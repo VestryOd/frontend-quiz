@@ -17,6 +17,9 @@
         <div class="content-nav__wrapper" v-if="elem.contentType === 'nav'">
           <Nav :items="elem.content" />
         </div>
+        <div class="content-table__wrapper" v-if="elem.contentType === 'table'">
+          <ContentTable :content="elem.content" />
+        </div>
       </div>
     </div>
   </section>
@@ -27,6 +30,7 @@
   import Description from "./Content/Description";
   import Picture from "./Content/Picture";
   import Nav from "./Content/Nav";
+  import ContentTable from "./Content/ContentTable";
 
   export default {
     name: "TheoryItem",
@@ -103,6 +107,42 @@
               "content": "class Person {\n    constructor(name) {\n        this.name = name\n    }\n}\n\nconst user = new Person('Ванька')"
             },
             {
+              "id": "table-01-1",
+              "contentType": "table",
+              "content": [
+                [
+                  "Критерий",
+                  "Куки",
+                  "Локальное хранилище",
+                  "Сессионное хранилище"
+                ],
+                [
+                  "Доступность",
+                  "Как на сервере, так и на клиенте",
+                  "Только на клиенте",
+                  "Только на клиенте"
+                ],
+                [
+                  "Время жизни",
+                  "Устанавливается с помощью expires",
+                  "До удаления пользователем",
+                  "До закрытия вкладки браузера"
+                ],
+                [
+                  "Поддержка шифрования",
+                  "Поддерживается",
+                  "Не поддерживается",
+                  "Не поддерживается"
+                ],
+                [
+                  "Максимальный размер данных",
+                  "4 Кб",
+                  "Около 5 Мб (зависит от браузера)",
+                  "Около 5 Мб (зависит от браузера)"
+                ]
+              ],
+            },
+            {
               "id": "nav-0-1",
               "contentType": "nav",
               "content": [
@@ -136,6 +176,7 @@
       Description,
       Picture,
       Nav,
+      ContentTable
     }
   }
 </script>
