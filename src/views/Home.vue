@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="home-view">
     <h1>This is a Home Page</h1>
     <hr>
+    <router-link :to="{ name: 'topic-page', params: { id: '7' } }">Go to the topic</router-link>
+    <router-link :to="{ name: 'task-page', params: { id: '3' } }">Go to the task</router-link>
     <TheoryItem />
     <TheoryItem :index-number="1" :item="second" />
   </div>

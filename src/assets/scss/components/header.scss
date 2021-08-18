@@ -1,8 +1,14 @@
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: $headerHeight;
   display: flex;
   //justify-content: space-around;
   align-items: center;
+  background-color: $bodyBackground;
+  box-shadow: 1px 1px 5px 3px rgba(0,0,0,.1);
 }
 
 .router-link {
@@ -18,7 +24,7 @@
   &:hover {
     color: $secondary;
   }
-  &-active {
+  &-active  {
     color: $accent;
   }
 }

@@ -1,11 +1,11 @@
 <template>
-  <div class="practice-view">
-    <h3>Practice</h3>
+  <div class="not-found-view">
+    <h1>not found</h1>
   </div>
 </template>
 
 <script>
   export default {
-    name: "Practice",
+    name: "NotFound"
   }
 </script>

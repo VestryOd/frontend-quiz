@@ -19,6 +19,7 @@
     "core-js": "^3.6.5",
     "highlight.js": "^10.7.2",
     "vue": "^2.6.11",
+    "vue-awesome": "^4.3.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2",
     "vuikit": "^0.8.10"

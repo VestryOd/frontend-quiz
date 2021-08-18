@@ -8,18 +8,39 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: () => import('../views/Home.vue'),
-      props: false
     },
     {
-      path: '/js-theory',
+      path: '/theory',
+      name: 'theory',
       component: () => import('../views/Theory.vue'),
-      props: true
     },
     {
-      path: '/js-practice',
+      path: '/theory/topic/:id',
+      name: 'topic-page',
+      component: () => import('../views/Topic.vue'),
+    },
+    {
+      path: '/practice',
+      name: 'practice',
       component: () => import('../views/Practice.vue'),
-      props: true
+    },
+    {
+      path: '/practice/task/:id',
+      name: 'task-page',
+      component: () => import('../views/Task.vue'),
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('../views/Test.vue'),
+      // props: true
+    },
+    {
+      path: '*',
+      name: 'not-found',
+      component: () => import('../views/NotFound.vue'),
     }
   ]
 });
