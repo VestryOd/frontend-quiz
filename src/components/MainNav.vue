@@ -8,7 +8,7 @@
 <!--    >-->
 <!--      {{ item.name }}-->
 <!--    </router-link>-->
-    <div v-for="item in navItems"
+    <div v-for="item in items"
          class="main-nav__item"
          :key="item.id">
             <router-link
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { routerConfig } from "@/constants";
+  // import { routerConfig } from "@/constants";
   import 'vue-awesome/icons/home';
   import 'vue-awesome/icons/book-open';
   import 'vue-awesome/icons/code';
@@ -31,11 +31,18 @@
 
   export default {
     name: "MainNav",
-    props: {},
-    computed: {
-      navItems() {
-        return routerConfig;
-      },
+    props: {
+      items: {
+        type: Array,
+        default() {
+          return [];
+        }
+      }
     },
+    // computed: {
+    //   navItems() {
+    //     return routerConfig;
+    //   },
+    // },
   }
 </script>

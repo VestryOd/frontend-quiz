@@ -4,16 +4,13 @@
          :to="item.path"
          class="main-nav__item"
          :key="item.id">
-<!--      <router-link class="link router-link">-->
-<!--        <v-icon :name="item.icon" class="main-nav__icon"/>{{ item.name }}-->
-<!--      </router-link>-->
       <v-icon :name="item.icon" class="main-nav__icon"/>{{ item.name }}
     </div>
   </div>
 </template>
 
 <script>
-  import { routerConfig } from "@/constants/";
+  import { languagesConfig } from "@/constants/";
   import 'vue-awesome/icons/brands/html5';
   import 'vue-awesome/icons/brands/css3-alt';
   import 'vue-awesome/icons/brands/js-square';
@@ -25,7 +22,7 @@
     props: {},
     computed: {
       navItems() {
-        return routerConfig;
+        return languagesConfig;
       },
     },
   }

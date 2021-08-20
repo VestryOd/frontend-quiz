@@ -11,6 +11,7 @@
 
 <script>
   import TheoryItem from "../components/TheoryItem";
+  import { apiService } from "../api";
 
   export default {
     name: "Home",
@@ -56,7 +57,18 @@
 
           ]
         },
+        allData: {
+          type: Object,
+          default() {
+            return {};
+          }
+        }
       };
+    },
+    async mounted() {
+      const data = await apiService('javascript');
+      console.log('we mounted', data)
+      this.allData = data;
     }
   }
 </script>

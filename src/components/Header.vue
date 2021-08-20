@@ -9,14 +9,14 @@
 <!--    >-->
 <!--      {{ item.name }}-->
 <!--    </router-link>-->
-    <MainNav />
+    <MainNav :items="navItems" />
     <div class="profile-icon"></div>
   </div>
 </template>
 
 <script>
-  import { routerConfig } from "@/constants";
-  import MainNav from "./Content/MainNav";
+  import { routerConfig } from "../constants/configs.js";
+  import MainNav from "./MainNav";
 
   export default {
     name: "Header",
@@ -29,5 +29,8 @@
     components: {
       MainNav,
     },
+    mounted() {
+      console.log('--mounted', this.navItems);
+    }
   }
 </script>
