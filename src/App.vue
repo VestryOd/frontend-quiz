@@ -4,7 +4,6 @@
       <div class="wrapper">
         <vHeader />
         <router-view />
-        <pre>{{ $route }}</pre>
       </div>
     </div>
   </div>
