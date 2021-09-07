@@ -7,7 +7,7 @@
         </h3>
       </div>
       <div class="theory-item__content" v-for="elem in item.data" :key="elem.id">
-        <Description :content="elem.content" v-if="elem.contentType === 'description'" />
+        <Description :content="elem.content" v-if="elem.contentType === 'text'" />
         <div class="content-code__wrapper" v-if="elem.contentType === 'code'">
           <Code :content="elem.content" />
         </div>
