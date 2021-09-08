@@ -20,6 +20,9 @@
         <div class="content-table__wrapper" v-if="elem.contentType === 'table'">
           <ContentTable :content="elem.content" />
         </div>
+        <div class="content-table__wrapper" v-if="elem.contentType === 'list'">
+          <ListItems :content="elem.content" />
+        </div>
       </div>
     </div>
   </section>
@@ -31,6 +34,7 @@
   import Picture from "./Content/Picture";
   import Nav from "./Content/Nav";
   import ContentTable from "./Content/ContentTable";
+  import ListItems from "./Content/ListItems";
 
   export default {
     name: "TheoryItem",
@@ -176,7 +180,8 @@
       Description,
       Picture,
       Nav,
-      ContentTable
+      ContentTable,
+      ListItems,
     }
   }
 </script>

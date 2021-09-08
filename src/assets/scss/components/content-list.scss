@@ -1,0 +1,12 @@
+.content-list {
+  &__wrapper {
+    margin: 2em 0;
+  }
+  &__item {
+    font-size: em(18);
+    line-height: em(20);
+    letter-spacing: 1.25px;
+    margin: 0;
+    text-align: left;
+  }
+}
