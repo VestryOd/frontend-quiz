@@ -1,14 +1,15 @@
 <template>
   <div class="spoiler">
-    <h3 class="spoiler__title spoiler__title-wrapper" :class="{ active: isShowed }" @click="onClick">{{ item.title }}</h3>
+    <h3 class="spoiler__title spoiler__title-wrapper" :class="{ active: isShowed }" @click="onClick">{{ title }}</h3>
     <transition name="fade">
-      <TheoryItem :item="item" v-if="isShowed" />
+<!--      <TheoryItem :item="item" v-if="isShowed" />-->
+      <slot v-if="isShowed" />
     </transition>
   </div>
 </template>
 
 <script>
-import TheoryItem from "@/components/TheoryItem";
+// import TheoryItem from "@/components/TheoryItem";
 
 export default {
   name: "Spoiler",
@@ -19,6 +20,12 @@ export default {
         return {
           title: 'Вопрос',
         }
+      }
+    },
+    title: {
+      type: String,
+      default() {
+        return "Вопрос"
       }
     }
   },
@@ -32,9 +39,9 @@ export default {
       this.isShowed = !this.isShowed;
     }
   },
-  components: {
-    TheoryItem,
-  }
+  // components: {
+  //   TheoryItem,
+  // }
 }
 </script>
 

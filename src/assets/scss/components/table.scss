@@ -1,6 +1,7 @@
 .content-table {
-  width: 100%;
   &__wrapper {
+    max-width: em(700);
+    width: 100%;
     margin: 2em 0;
   }
   & table {
