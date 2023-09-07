@@ -20,7 +20,7 @@ const routerConfig = [
   {
     id: 'test',
     name: 'Тест',
-    path: '/test',
+    path: '/quiz',
     icon: 'laptop-code'
   },
 ];
@@ -77,8 +77,27 @@ const navLinkTypes = [
   },
 ];
 
+const quizSelectItems = [
+  {
+    id: "quiz-theory",
+    value: "theory",
+    name: "Theory"
+  },
+  {
+    id: "quiz-practice",
+    value: "practice",
+    name: "Practice"
+  },
+  {
+    id: "quiz-both",
+    value: "theory,practice",
+    name: "Both"
+  },
+]
+
 export {
   routerConfig,
   languagesConfig,
   navLinkTypes,
+  quizSelectItems
 };

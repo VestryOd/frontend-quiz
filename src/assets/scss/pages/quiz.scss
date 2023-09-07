@@ -1,0 +1,9 @@
+.quiz-content {
+  &__content-item {
+    margin-top: 40px;
+    & h3 {
+      font-size: 24px;
+      padding: 10px 0;
+    }
+  }
+}

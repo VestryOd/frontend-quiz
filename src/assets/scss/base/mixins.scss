@@ -14,31 +14,31 @@
 // --------------------------------------------------
 
 @mixin mobile {
-    @media (min-width: #{$mobileWidth}) {
+    @media (max-width: #{$mobileWidth}) {
         @content;
     }
 }
 
 @mixin largeMobile {
-    @media (min-width: #{$largeMobileWidth}) {
+    @media (max-width: #{$largeMobileWidth}) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (min-width: #{$tabletWidth}) {
+    @media (max-width: #{$tabletWidth}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktopWidth}) {
+    @media (max-width: #{$desktopWidth}) {
         @content;
     }
 }
 
 @mixin largeDesktop {
-    @media (min-width: #{$largeDesktopWidth}) {
+    @media (max-width: #{$largeDesktopWidth}) {
         @content;
     }
 }

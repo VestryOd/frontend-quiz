@@ -32,10 +32,9 @@ export default new Router({
       component: () => import('../views/Task.vue'),
     },
     {
-      path: '/test',
-      name: 'test',
-      component: () => import('../views/Test.vue'),
-      // props: true
+      path: '/quiz',
+      name: 'quiz',
+      component: () => import('../views/Quiz.vue'),
     },
     {
       path: '*',

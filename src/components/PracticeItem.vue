@@ -5,6 +5,7 @@
         <Code :content="item.code" />
       </div>
       <PracticeQuestionsList
+          :v-if="options"
           :options="options"
           :clickHandler="onClick" :rightAnswer="item.right_answer"/>
       <div class="content-table__wrapper" v-if="(!item.right_answer && !item.answers) || selected">

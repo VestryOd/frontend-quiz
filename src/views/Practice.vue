@@ -1,6 +1,6 @@
 <template>
   <div class="practice-view">
-    <h3>Practice</h3>
+    <h1>Practice</h1>
     <PracticeItem v-for="item in practice" :item="item" :key="item.id" />
   </div>
 </template>

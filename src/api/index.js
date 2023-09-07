@@ -1,6 +1,6 @@
 import moment from "moment";
-import { datesFormatToSave, daysDifferenceCount, lastSaveDatePoint, GET, SAVE } from "../constants";
-import { calculateDatesDifference } from "../services/helpers";
+import { datesFormatToSave, daysDifferenceCount, lastSaveDatePoint, GET, SAVE } from "@/constants";
+import { calculateDatesDifference, getRandomItemsByIndexes, getRandomSetIndexes } from "@/services/helpers";
 
 const getLocalData = source => {
   const headers = {
@@ -32,7 +32,7 @@ const storageService = (operation, request, data) => {
 const apiService = async (req) => {
   const lastSavePoint = localStorage.getItem(lastSaveDatePoint);
   if (!lastSavePoint) {
-    storageService(SAVE, req, moment().format(datesFormatToSave));
+    storageService(SAVE, lastSaveDatePoint, moment().format(datesFormatToSave));
     const data = await getLocalData(req);
     storageService(SAVE, req, data);
     return data;
@@ -47,6 +47,17 @@ const apiService = async (req) => {
   }
 };
 
+const getRandomSuit = async ({ discipline, quantity }) => {
+  const result = {};
+  const disciplineData = await apiService('javascript')
+  for await (const item of discipline) {
+    const indexesSet = getRandomSetIndexes(0, disciplineData[item].length, quantity);
+    result[item] = getRandomItemsByIndexes(disciplineData[item], indexesSet);
+  }
+  return result;
+}
+
 export {
   apiService,
+  getRandomSuit
 }
