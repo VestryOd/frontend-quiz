@@ -1,0 +1,28 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: $headerHeight;
+  max-width: em(840);
+  margin: 0 auto;
+}
+
+.main-nav__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 em(20);
+}
+
+.main-nav__icon {
+  width: em(18);
+  height: em(18);
+  margin-right: em(5);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+}

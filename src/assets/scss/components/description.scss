@@ -1,0 +1,11 @@
+.content-description {
+  & p {
+    font-size: em(18);
+    line-height: em(20);
+    letter-spacing: 1.25px;
+    margin: 0;
+    text-align: left;
+    border-left: em(10) solid $codeBg;
+    padding-left: em(20);
+  }
+}

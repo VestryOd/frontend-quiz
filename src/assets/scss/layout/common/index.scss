@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  max-width: em(1200);
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper {
+  padding: em(15);
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
