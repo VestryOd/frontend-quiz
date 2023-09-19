@@ -1,11 +1,18 @@
 .content-nav {
   display: flex;
   //flex-direction: column;
+  @include largeMobile {
+    display: flex;
+    flex-direction: column;
+  }
   &__wrapper {
     margin: 2em 0;
   }
   &__item-wrapper {
     margin: em(20);
     display: inline-flex;
+    @include largeMobile {
+      margin: 0.5em;
+    }
   }
 }
