@@ -1,0 +1,20 @@
+.quiz-counter {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 17px;
+    z-index: 101;
+  }
+  & > span {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0 0.5em;
+  }
+  &__right {
+    color: $success_answer;
+  }
+  &__wrong {
+    color: $wrong_answer;
+  }
+}

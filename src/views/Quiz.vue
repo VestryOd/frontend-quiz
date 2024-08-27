@@ -16,7 +16,19 @@
       </section>
       <section class="quiz-content__content-item" v-if="practiceLength">
         <h3>Practice</h3>
-        <PracticeItem v-for="item in practice" :item="item" :key="item.id" />
+        <QuizCounter
+            v-if="practiceLength"
+            :right="right"
+            :total="practiceLength"
+            :wrong="wrong"
+        />
+        <PracticeItem
+            v-for="item in practice"
+            :item="item"
+            :key="item.id"
+            @rightAnswer="handleRight"
+            @wrongAnswer="handleWrong"
+        />
       </section>
     </div>
   </div>
@@ -29,18 +41,23 @@ import { getRandomSuit } from '@/api';
 import TheoryItem from '@/components/TheoryItem.vue';
 import Spoiler from '@/components/Content/Spoiler.vue';
 import PracticeItem from '@/components/PracticeItem.vue';
+import QuizCounter from '@/components/QuizCounter.vue';
 export default {
     name: "Quiz",
     data() {
       return {
         theory: [],
-        practice: []
+        practice: [],
+        right: 0,
+        wrong: 0
       }
     },
     components: {
       PracticeItem,
-      Spoiler, TheoryItem,
-      QuizSelectForm
+      Spoiler,
+      TheoryItem,
+      QuizSelectForm,
+      QuizCounter
     },
     computed: {
         disciplineItems() {
@@ -62,6 +79,12 @@ export default {
       resetHandle() {
         this.theory = [];
         this.practice = [];
+      },
+      handleRight() {
+          this.right += 1;
+      },
+      handleWrong() {
+          this.wrong += 1;
       }
     }
   }

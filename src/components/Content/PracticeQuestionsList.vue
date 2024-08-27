@@ -43,6 +43,7 @@ export default {
     },
     getAnsweredClassName(key) {
       if (!this.selected) return "";
+      if (key !== this.selected && key === this.rightAnswer) return "practice-questions-list__item-wrong-success";
       if (key !== this.selected) return "practice-questions-list__item-is-answered";
       return key === this.rightAnswer && this.selected === key
           ? "practice-questions-list__item-success"
@@ -51,7 +52,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

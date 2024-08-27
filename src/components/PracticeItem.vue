@@ -53,17 +53,9 @@ export default {
   },
   methods: {
     onClick: function(key) {
-      this.selected = key
-    }
-  },
-  mounted() {
-    if (typeof this.item === 'function') {
-      console.log("--item", this.item);
+      this.selected = key;
+      this.$emit(key ===  this.$props.item.right_answer ? 'rightAnswer' : 'wrongAnswer');
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>
