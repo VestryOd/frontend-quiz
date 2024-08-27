@@ -10,6 +10,9 @@
     font-size: 1.5em;
     font-weight: 600;
     padding: 0 0.5em;
+    @include largeMobile {
+      padding: 0 0.2em;
+    }
   }
   &__right {
     color: $success_answer;
